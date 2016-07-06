@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C5AA72C-0F72-4569-A7D1-3F57776CE970}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ouranos.NextBootOSSelector</RootNamespace>
+    <AssemblyName>Ouranos.NextBootOSSelector.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Ouranos.NextBootOSSelector.Core.xml</DocumentationFile>
+    <IntermediateOutputPath>C:\Users\TAKUYA\AppData\Local\Temp\vs9CBA.tmp\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Ouranos.NextBootOSSelector.Core.xml</DocumentationFile>
+    <IntermediateOutputPath>C:\Users\TAKUYA\AppData\Local\Temp\vs9CBA.tmp\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Prometheus.key</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BootConfigurationData\BcdBooleanElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdBootMgrElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdDeviceData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceFileData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceLocateData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceLocateElementChildData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceLocateElementData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceLocateStringData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceObjectElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdDevicePartitionData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceQualifiedPartitionData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdDeviceUnknownData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdIntegerElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdIntegerListElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdLibraryElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdLibrary_ConfigAccessPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdLibrary_DebuggerStartPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdLibrary_DebuggerType.cs" />
+    <Compile Include="BootConfigurationData\BcdLibrary_FirstMegabytePolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdLibrary_SiPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdManager.cs" />
+    <Compile Include="BootConfigurationData\BcdMemDiagElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdMemDiag_TestMix.cs" />
+    <Compile Include="BootConfigurationData\BcdMemDiag_TesttoFail.cs" />
+    <Compile Include="BootConfigurationData\BcdObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdObjectElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdObjectListElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdOSLoaderElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_BootStatusPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_BootUxPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_DriverLoadFailurePolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_HypervisorDebuggerType.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_HypervisorLaunchType.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_NxPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_PAEPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_SafeBoot.cs" />
+    <Compile Include="BootConfigurationData\BcdOSLoader_X2APICPolicy.cs" />
+    <Compile Include="BootConfigurationData\BcdResumeElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdSetupTemplateElementTypes.cs" />
+    <Compile Include="BootConfigurationData\BcdSetup_DeviceType.cs" />
+    <Compile Include="BootConfigurationData\BcdStore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdStringElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BootConfigurationData\BcdOSLoader_TpmBootEntropyPolicy.cs" />
+    <Compile Include="BootConfigurationData\OperatingSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NextBootOSSelector.Resource\NextBootOSSelector.Resource.csproj">
+      <Project>{a9187141-b0d6-43a7-959a-1ccde55efe0c}</Project>
+      <Name>NextBootOSSelector.Resource</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Prometheus.key" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
