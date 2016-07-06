@@ -34,7 +34,7 @@
     <IntermediateOutputPath>C:\Users\TAKUYA\AppData\Local\Temp\vs9CBA.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <DelaySign>true</DelaySign>
