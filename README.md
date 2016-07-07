@@ -27,6 +27,11 @@ Next Boot OS Selector は、次回起動するOSの選択、ブート情報を�
   * ブート識別名や既定のブートOSの変更
 
 
+## Screen Shot (スクリーンショット)
+
+![Task Tray](/web/images/Tray.png "Task Tray")
+
+
 ## System requirements (システム要件)
 
 ###### English 
