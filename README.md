@@ -29,7 +29,7 @@ Next Boot OS Selector は、次回起動するOSの選択、ブート情報を�
 
 ## Screen Shot (スクリーンショット)
 
-![Task Tray](/web/images/Tray.png "Task Tray")
+![Task Tray](/web/images/tray.png "Task Tray")
 
 
 ## System requirements (システム要件)
