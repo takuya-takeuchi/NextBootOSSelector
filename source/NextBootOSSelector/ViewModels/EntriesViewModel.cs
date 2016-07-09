@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
 using GalaSoft.MvvmLight;
@@ -124,6 +125,16 @@ namespace Ouranos.NextBootOSSelector.ViewModels
             }
             set
             {
+                if (BootConfigurationDataEditModel.Instance.CurrentOperatingSystem != null)
+                {
+                    BootConfigurationDataEditModel.Instance.CurrentOperatingSystem.PropertyChanged -= this.CurrentOperatingSystemPropertyChanged;
+                }
+
+                if (value != null)
+                {
+                    value.PropertyChanged += this.CurrentOperatingSystemPropertyChanged;
+                }
+
                 BootConfigurationDataEditModel.Instance.CurrentOperatingSystem = value;
 
                 this.RaisePropertyChanged();
@@ -228,6 +239,22 @@ namespace Ouranos.NextBootOSSelector.ViewModels
         #endregion
 
         #region イベントハンドラ
+
+        private void CurrentOperatingSystemPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            var currentOperatingSystem = BootConfigurationDataEditModel.Instance.CurrentOperatingSystem;
+            if (currentOperatingSystem == null)
+            {
+                return;
+            }
+
+            switch (propertyChangedEventArgs.PropertyName)
+            {
+                case "Description":
+                    this.RaiseCanExecuteChanged(this.SaveCommand);
+                    break;
+            }
+        }
 
         private void ModelChanged(object sender, EventArgs eventArgs)
         {

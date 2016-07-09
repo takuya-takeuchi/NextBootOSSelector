@@ -83,6 +83,7 @@ namespace Ouranos.NextBootOSSelector.Models
             {
                 this.ValidateProperty("Description", value);
                 this._OperatingSystem.Description = value;
+                this.RaisePropertyChanged();
             }
         }
 
