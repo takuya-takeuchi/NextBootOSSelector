@@ -148,6 +148,7 @@ namespace Ouranos.NextBootOSSelector.Models
             set
             {
                 this._OperatingSystem.Order = value;
+                this.RaisePropertyChanged();
             }
         }
 

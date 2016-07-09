@@ -208,11 +208,12 @@ namespace Ouranos.NextBootOSSelector.Models
                 operatingSystems[indexOf] = operatingSystems[newIndex];
                 operatingSystems[newIndex] = temp;
 
+                // Order を変更する前に変更する
+                this.OperatingSystems = new ObservableCollection<OperatingSystemModel>(operatingSystems);
+
                 var order = operatingSystems[indexOf].Order;
                 operatingSystems[indexOf].Order = operatingSystems[newIndex].Order;
                 operatingSystems[newIndex].Order = order;
-
-                this.OperatingSystems = new ObservableCollection<OperatingSystemModel>(operatingSystems);
             }
 
             return indexOf != -1;
@@ -231,11 +232,12 @@ namespace Ouranos.NextBootOSSelector.Models
                 operatingSystems[indexOf] = operatingSystems[newIndex];
                 operatingSystems[newIndex] = temp;
 
+                // Order を変更する前に変更する
+                this.OperatingSystems = new ObservableCollection<OperatingSystemModel>(operatingSystems);
+
                 var order = operatingSystems[indexOf].Order;
                 operatingSystems[indexOf].Order = operatingSystems[newIndex].Order;
                 operatingSystems[newIndex].Order = order;
-
-                this.OperatingSystems = new ObservableCollection<OperatingSystemModel>(operatingSystems);
             }
 
             return indexOf != -1;

@@ -188,8 +188,6 @@ namespace Ouranos.NextBootOSSelector.ViewModels
             if (BootConfigurationDataEditModel.Instance.MoveDown())
             {
                 this.OperatingSystems = BootConfigurationDataEditModel.Instance.OperatingSystems;
-
-                this.RaiseCanExecuteChanged(this.SaveCommand);
             }
         }
 
@@ -198,8 +196,6 @@ namespace Ouranos.NextBootOSSelector.ViewModels
             if (BootConfigurationDataEditModel.Instance.MoveUp())
             {
                 this.OperatingSystems = BootConfigurationDataEditModel.Instance.OperatingSystems;
-
-                this.RaiseCanExecuteChanged(this.SaveCommand);
             }
         }
 
@@ -252,6 +248,11 @@ namespace Ouranos.NextBootOSSelector.ViewModels
             {
                 case "Description":
                     this.RaiseCanExecuteChanged(this.SaveCommand);
+                    break;
+                case "Order":
+                    this.RaiseCanExecuteChanged(this.SaveCommand);
+                    this.RaiseCanExecuteChanged(this.MoveUpCommand);
+                    this.RaiseCanExecuteChanged(this.MoveDownCommand);
                     break;
             }
         }
